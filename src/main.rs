@@ -10,7 +10,6 @@ mod call_endpoint;
 
 #[derive(Deserialize, Clone)]
 struct CustomEvent {
-    #[serde(rename = "firstName")]
     data: String,
 }
 
