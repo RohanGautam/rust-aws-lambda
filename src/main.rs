@@ -3,9 +3,7 @@ extern crate serde_derive;
 #[macro_use]
 extern crate log;
 extern crate simple_logger;
-
 use lambda::{handler_fn, Context};
-
 mod call_endpoint;
 
 #[derive(Deserialize, Clone)]
