@@ -3,7 +3,18 @@ name = "rust-lambda"
 version = "0.1.0"
 authors = ["Rohan Gautam <rohan1gautam@gmail.com>"]
 edition = "2018"
+autobins = false
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+name = "bootstrap"
+path="src/main.rs"
 
 [dependencies]
+lambda = { git = "https://github.com/awslabs/aws-lambda-rust-runtime/", rev = "ba696878310347f6610db819e3824be1b798fe63" }
+serde = "^1"
+serde_json = "^1"
+serde_derive = "^1"
+log = "^0.4"
+simple_logger = "^1"
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1.2.0", features = ["full"] }
